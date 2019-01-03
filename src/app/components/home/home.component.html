@@ -1,0 +1,7 @@
+<div class="container">
+  <gridster [options]="options">
+    <gridster-item [item]="item.gridItem" *ngFor="let item of dashboard.items">
+      <app-dynamic [widgetModel]="item" [edition]="false"></app-dynamic>
+    </gridster-item>
+  </gridster>
+</div>

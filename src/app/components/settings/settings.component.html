@@ -1,0 +1,31 @@
+<mat-toolbar>Settings page used to edit the content of the “Home” page.</mat-toolbar>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav mode="side" opened class="example-sidenav">
+    <p>
+      Click on install button to add your widgets to the page.
+    </p>
+    <div fxLayout="column" fxLayoutAlign="space-around stretch">
+      <mat-card *ngFor="let widget of widgetsRegistry">
+        <mat-card-header>
+          <mat-card-title>{{widget?.name}}</mat-card-title>
+        </mat-card-header>
+        <img class="thumbnail" mat-card-image [src]="widget?.imagePath" alt="no image">
+        <mat-card-content>
+          <p>{{widget?.description}}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button color="accent" (click)="installWidget(widget)">Install</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="container">
+      <gridster [options]="options">
+        <gridster-item [item]="item.gridItem" *ngFor="let item of dashboard.items">
+          <app-dynamic [widgetModel]="item" [edition]="true" (removeItemEvent)="removeItem($event)"></app-dynamic>
+        </gridster-item>
+      </gridster>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

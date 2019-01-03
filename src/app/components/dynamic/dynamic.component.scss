@@ -1,0 +1,38 @@
+:host {
+  .widget-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    .widget-header {
+      color: #fff;
+      background-color: #0e85bc;
+      height: 40px;
+      touch-action: none;
+      .widget-handler {
+        cursor: move;
+        overflow: hidden;
+        mat-icon {
+          margin-left: 4px;
+        }
+        .widget-name {
+          margin-left: 10px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          max-width: 90%;
+        }
+      }
+      .close-widget {
+        cursor: pointer;
+        width: 32px;
+      }
+    }
+    .widget-content {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+  }
+}

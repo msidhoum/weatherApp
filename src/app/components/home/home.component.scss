@@ -1,0 +1,40 @@
+app-home {
+    > div {
+        height: 100%;
+        width: 100%;
+        display: block;
+        gridster {
+          height: calc(100vh - 50px);
+          background-color: rgb(255, 255, 255);
+          .gridster-row {
+            transition: 0.05s;
+            border: 1px dashed rgba(63, 114, 190, 0.5);
+            border-radius: 8px;
+            border-top: none;
+          }
+          .gridster-column {
+            transition: 0.05s;
+            border: 1px dashed rgba(63, 114, 190, 0.5);
+            border-radius: 8px;
+            border-left: none;
+          }
+          gridster-item {
+            transition: 0.05s;
+            border-radius: 8px;
+            background-color: rgba(173, 195, 255, 0.6);
+            .handle-s {
+              height: 10px;
+            }
+            .handle-e {
+              width: 10px;
+            }
+            .handle-n {
+              height: 10px;
+            }
+            .handle-w {
+              width: 10px;
+            }
+          }
+        }
+      }
+}

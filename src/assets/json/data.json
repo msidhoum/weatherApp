@@ -1,0 +1,108 @@
+{
+    "widgetsRegistry": [
+        {
+            "id": 0,
+            "name": "City Weather",
+            "category": "Meteorological",
+            "tags": [
+                "weather",
+                "country",
+                "tracking",
+                "analysis"
+            ],
+            "description": "Displays the name of the city, the current temperature in celsius and an icon of the weather",
+            "imagePath": [
+                "../../assets/img/meteo.png"
+            ],
+            "type": "Widget",
+            "version": [
+                "1.0",
+                "2.0",
+                "3.0",
+                "3.1"
+            ],
+            "widgetValues": {
+                "cities": [
+                    {
+                        "id": "2988507",
+                        "name": "Paris",
+                        "countryCode": "fr"
+                    },
+                    {
+                        "id": "2992166",
+                        "name": "Montpellier",
+                        "countryCode": "fr"
+                    },
+                    {
+                        "id": "2643743",
+                        "name": "London",
+                        "countryCode": "gb"
+                    },
+                    {
+                        "id": "6539761",
+                        "name": "Rome",
+                        "countryCode": "it"
+                    },
+                    {
+                        "id": "5128581",
+                        "name": "New York",
+                        "countryCode": "us"
+                    },
+                    {
+                        "id": "1850147",
+                        "name": "Tokyo",
+                        "countryCode": "jp"
+                    },
+                    {
+                        "id": "2950159",
+                        "name": "Berlin",
+                        "countryCode": "de"
+                    },
+                    {
+                        "id": "360630",
+                        "name": "Cairo",
+                        "countryCode": "eg"
+                    },
+                    {
+                        "id": "524901",
+                        "name": "Moscow",
+                        "countryCode": "ru"
+                    },
+                    {
+                        "id": "3451190",
+                        "name": "Rio de Janeiro",
+                        "countryCode": "br"
+                    }
+                ]
+            },
+            "rowSize": 2,
+            "colSize": 2,
+            "ngComponent": "WeatherCardComponent"
+        },
+        {
+            "id": 1,
+            "name": "Weather Map",
+            "category": "Meteorological",
+            "tags": [
+                "weather",
+                "map",
+                "geolocation",
+                "analysis"
+            ],
+            "description": "Show on the map each selected country",
+            "imagePath": [
+                "../../assets/img/map.png"
+            ],
+            "type": "Widget",
+            "version": [
+                "1.0",
+                "2.0",
+                "3.0",
+                "3.1"
+            ],
+            "rowSize": 4,
+            "colSize": 4,
+            "ngComponent": "WeatherMapComponent"
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+<div class="widget-container" fxLayout="column">
+  <div class="widget-header" fxLayout="row" fxFlex="40px" *ngIf="edition">
+    <div class="widget-handler" fxFlex fxLayoutAlign="start center">
+      <mat-icon>layers</mat-icon>
+      <h5 class="widget-name">{{ widgetInfos?.name }}</h5>
+    </div>
+    <div fxFlex="40px" fxLayoutAlign="center center">
+      <mat-icon class="close-widget" (click)="removeItem(widgetModel)">close</mat-icon>
+    </div>
+  </div>
+  <div class="widget-content" fxFlex>
+    <ndc-dynamic *ngIf="component" [ndcDynamicComponent]="component" [ndcDynamicInputs]="inputs"></ndc-dynamic>
+  </div>
+</div>

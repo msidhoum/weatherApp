@@ -1,0 +1,37 @@
+<div class="container" fxLayout="column" fxLayoutAlign="center stretch">
+
+  <div *ngIf="configMode" class="config-panel">
+    <div fxLayout="column" fxLayoutAlign="start center">
+      <h1>Widget configuration</h1>
+      <p>Select a city from the list behind to display current weather.</p>
+      <div class="select-div">
+        <mat-select placeholder="Select city" [(value)]="cityId" (valueChange)="onChangeCity($event)">
+          <mat-option *ngFor="let option of options" [value]="option.value">
+            {{ option.label }}
+          </mat-option>
+        </mat-select>
+      </div>
+      <button (click)="configMode=false">OK</button>
+    </div>
+  </div>
+  <div *ngIf="!configMode" class="display-panel">
+    <div class="meteo">
+      <div class="center">
+        <i class="wi {{weatherIcon.className}}"></i>
+      </div>
+      <div class="city">
+        <span>{{cityName}}</span>
+      </div>
+      <div class="location">
+        <button mat-flat-button color="primary" (click)="zoomToLocation()">
+          <mat-icon>location_on</mat-icon> center on map
+        </button>
+      </div>
+      <div class="settings-div">
+        <mat-icon (click)="configMode=true">settings</mat-icon>
+      </div>
+      <div class="temp">{{temperature}} °C</div>
+      <div class="owmIcon"><img [src]="weatherIcon.owmIconUrl"></div>
+    </div>
+  </div>
+</div>

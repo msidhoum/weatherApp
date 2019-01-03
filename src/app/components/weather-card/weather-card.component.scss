@@ -1,0 +1,79 @@
+app-weather-card {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url('../../../assets/img/sky.png');
+    .display-panel {
+        padding-top: 30px;
+    }
+    div.meteo {
+        color: #fff;
+        position: relative;
+        .center {
+            position: absolute;
+            top: 25px;
+            text-align: center;
+            width: 100%;
+            i {
+                font-size: 8em;
+            }
+        }
+        .city {
+            position: absolute;
+            top: 40px;
+            left: 10px;
+            span {
+                font-size: 1.5em;
+            }
+        }
+        .location {
+            position: absolute;
+            top: 140px;
+            left: 50%;
+            margin-left: -80px;
+        }
+        .settings-div {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            mat-icon {
+                color: #fff;
+                cursor: pointer;
+            }
+        }
+        .temp {
+            position: absolute;
+            top: 4px;
+            right: 10px;
+            font-size: 3em;
+        }
+        .owmIcon {
+            position: absolute;
+            top: 36px;
+            right: 10px;
+        }
+    }
+    .config-panel {
+        color: #fff;
+        .select-div {
+            margin: 10px;
+            width: 200px;
+            border: 1px solid #fff;
+            padding: 10px;
+            mat-select {
+                .mat-select-arrow {
+                    color: #fff;
+                }
+                .mat-select-value {
+                    color: #fff;
+                    font-size: 15px;
+                }
+                .mat-select-placeholder {
+                    color: #fff;
+                    font-size: 15px;
+                }
+            }
+        }
+
+    }
+}
