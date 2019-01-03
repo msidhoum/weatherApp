@@ -1,1 +1,70 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~material-design-icons/iconfont/material-icons.css";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+@import "assets/weather-icons/css/weather-icons.min.css";
+@import "assets/weather-icons/css/weather-icons-wind.min.css";
+@import "~ol/ol.css";
+
+
+*[hidden] {
+    display: none !important;
+  }
+
+  * {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+  }
+
+  html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    background: rgb(255, 255, 255);
+    font-family: 'Montserrat', sans-serif;
+    color: rgba(0,0,0,.87);
+
+    @font-face {
+      font-family: "Montserrat";
+      src: url("assets/fonts/Montserrat-Regular.ttf");
+      font-weight: normal;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "Montserrat";
+      src: url("assets/fonts/Montserrat-Bold.ttf");
+      font-weight: bold;
+    }
+    @font-face {
+      font-family: "Montserrat";
+      src: url("assets/fonts/Montserrat-Italic.ttf");
+      font-style: italic;
+    }
+    @font-face {
+      font-family: "Montserrat";
+      src: url("assets/fonts/Montserrat-BoldItalic.ttf");
+      font-weight: bold;
+      font-style: italic;
+    }
+
+    *[click] {
+      cursor: pointer;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .mat-tab-header {
+      border-bottom: none;
+    }
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #0e85bc;
+  }
